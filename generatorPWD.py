@@ -1,3 +1,9 @@
+'''
+ # @ Author: Marcel Barreto
+ # @ Create Time: 2024-04-30 09:25:48
+ # @ Description: Script para gerar senhas aleatóriamente
+ '''
+
 import argparse
 import random
 import string
@@ -19,8 +25,8 @@ def gerar_senha(tamanho_senha:int=15, quantidade:int=+1) -> None:
 if __name__ == "__main__":
     # Receber argumentos dos usuário
     parser = argparse.ArgumentParser(description="Gerador de Senha Aleatória")
-    parser.add_argument("--tamanho", type=int, default=15, help="Tamanho da senha a ser gerada (padrão: 15)")
-    parser.add_argument("--quantidade", type=int, default=1, help="Quantidade de senhas a serem geradas (padrão: 10)")
+    parser.add_argument("-t", "--tamanho", type=int, default=15, help="Tamanho da senha a ser gerada (padrão: 15)")
+    parser.add_argument("-q", "--quantidade", type=int, default=1, help="Quantidade de senhas a serem geradas (padrão: 10)")
     args = parser.parse_args()
 
     gerar_senha(args.tamanho, args.quantidade)
